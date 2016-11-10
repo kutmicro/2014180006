@@ -1,14 +1,14 @@
-void setup() {         
+<가변저항 예제>
+
+void setup() {         				//1~3 9600 시리얼 통신 시작
   Serial.begin(9600);
-}
- 
-void loop() {
-  int sensorValue = analogRead(A0);
- 
-  float voltage = sensorValue * (5.0 / 1023.0);
+} void loop() {
+  int sensorValue = analogRead(A0);		//아두이노 A0핀에서 아날로그값 읽음
+   float voltage = sensorValue * (5.0 / 1023.0); //센서값을 전압으로 변환
+					         아날로그 반환값이 0~1023범위기 때문
    
-  Serial.print("sensorValue = ");
+  Serial.print("sensorValue = ");			//센서값 출력
   Serial.print(sensorValue);
-  Serial.print(", voltage = ");
+  Serial.print(", voltage = ");			//전압값 출력
   Serial.println(voltage);
 }
