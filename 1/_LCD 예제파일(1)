@@ -1,0 +1,16 @@
+<LCD 출력 예제_1>
+
+#include "LCD4884.h"
+
+void setup()
+{
+  lcd.LCD_init();
+  lcd.LCD_clear();
+}
+
+void loop()
+{
+  lcd.LCD_write_string(10, 2, "Hello", MENU_NORMAL); //lcd.LCD_write_string(x축,y축,내용,폰트);
+
+  delay(10);
+}
