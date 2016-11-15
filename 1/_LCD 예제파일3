@@ -1,0 +1,14 @@
+#include <LiquidCrystal.h>
+
+LiquidCrystal lcd(12,11,5,4,3,2); //핀 인터페이스의 숫자와 함께 LiquidCrystal 라이브러리를 초기화함
+
+void setup() {
+lcd.begin(16,2); //LCD의 행과 열의 수를 설정함
+lcd.print("hello, world!"); //LCD에 heool world를 표시함
+}
+
+void loop() {
+lcd.setCursor(0,1); //두번째 행에 커서를 위치시킴
+			(첫번째 행은 0부터 시작하기 때문에 1은 두번째 행)
+lcd.print(millis()/1000); //리렛 이후의 Sec을 출력
+}
